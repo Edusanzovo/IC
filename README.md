@@ -120,6 +120,6 @@ project/
 ## Relevância Científica
 Este projeto faz parte de uma **Iniciação Científica (IC)** voltada à aplicação de inteligência artificial em análise de imagens dermatológicas.
 
-A motivação clínica é apoiar o diagnóstico diferencial de casos **potencialmente fatais de SJS/TEN**, reduzindo confusão com outros CADRs graves.
+A motivação clínica é apoiar o diagnóstico diferencial de casos **potencialmente fatais de SJS/TEN**, reduzindo confusão com outros CADRs menos graves.
 
 ---
