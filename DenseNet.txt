@@ -1,0 +1,93 @@
+======== FOLD 1 ========
+Epoch 1: Val Acc = 0.8341
+Epoch 2: Val Acc = 0.8251
+Epoch 3: Val Acc = 0.8386
+Epoch 4: Val Acc = 0.7982
+Epoch 5: Val Acc = 0.7489
+Epoch 6: Val Acc = 0.7713
+Epoch 7: Val Acc = 0.7982
+Epoch 8: Val Acc = 0.7534
+
+Matriz de confusão do Fold 1:
+[[ 63  15]
+ [ 21 124]]
+
+======== FOLD 2 ========
+Epoch 1: Val Acc = 0.8444
+Epoch 2: Val Acc = 0.7956
+Epoch 3: Val Acc = 0.8622
+Epoch 4: Val Acc = 0.8400
+Epoch 5: Val Acc = 0.9022
+Epoch 6: Val Acc = 0.8667
+Epoch 7: Val Acc = 0.8178
+Epoch 8: Val Acc = 0.8356
+
+Matriz de confusão do Fold 2:
+[[ 72  11]
+ [ 11 131]]
+
+======== FOLD 3 ========
+Epoch 1: Val Acc = 0.8364
+Epoch 2: Val Acc = 0.8458
+Epoch 3: Val Acc = 0.8551
+Epoch 4: Val Acc = 0.8411
+Epoch 5: Val Acc = 0.8645
+Epoch 6: Val Acc = 0.8785
+Epoch 7: Val Acc = 0.8598
+Epoch 8: Val Acc = 0.7570
+
+Matriz de confusão do Fold 3:
+[[ 61  14]
+ [ 12 127]]
+
+======== FOLD 4 ========
+Epoch 1: Val Acc = 0.8043
+Epoch 2: Val Acc = 0.8000
+Epoch 3: Val Acc = 0.8870
+Epoch 4: Val Acc = 0.8435
+Epoch 5: Val Acc = 0.8391
+Epoch 6: Val Acc = 0.8696
+Epoch 7: Val Acc = 0.8522
+Epoch 8: Val Acc = 0.8174
+
+Matriz de confusão do Fold 4:
+[[ 67  19]
+ [  7 137]]
+
+======== FOLD 5 ========
+Epoch 1: Val Acc = 0.8097
+Epoch 2: Val Acc = 0.8407
+Epoch 3: Val Acc = 0.8407
+Epoch 4: Val Acc = 0.8363
+Epoch 5: Val Acc = 0.8805
+Epoch 6: Val Acc = 0.8363
+Epoch 7: Val Acc = 0.8805
+Epoch 8: Val Acc = 0.8717
+
+Matriz de confusão do Fold 5:
+[[ 55  19]
+ [  8 144]]
+
+======== FOLD 6 ========
+Epoch 1: Val Acc = 0.8100
+Epoch 2: Val Acc = 0.7466
+Epoch 3: Val Acc = 0.7376
+Epoch 4: Val Acc = 0.8235
+Epoch 5: Val Acc = 0.8371
+Epoch 6: Val Acc = 0.8145
+Epoch 7: Val Acc = 0.8281
+Epoch 8: Val Acc = 0.7692
+
+Matriz de confusão do Fold 6:
+[[ 58  24]
+ [ 12 127]]
+
+Acurácia: 87,1 ± 2,4%
+
+Sensibilidade: 77,8 ± 4,1%
+
+Especificidade: 91,9 ± 2,7%
+
+Precisão: 85,4 ± 3,7%
+
+F1-score: 81,3 ± 2,9%
