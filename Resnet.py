@@ -207,3 +207,4 @@ def run_cross_validation(base_path, batch_size=8, epochs=50):
 
 
 run_cross_validation(r"C:\Users\eduqu\OneDrive\Documentos\GitHub\IC\dataset", batch_size=8, epochs=50)
+

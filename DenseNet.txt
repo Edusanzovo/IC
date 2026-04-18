@@ -91,3 +91,4 @@ Especificidade: 91,9 ± 2,7%
 Precisão: 85,4 ± 3,7%
 
 F1-score: 81,3 ± 2,9%
+
