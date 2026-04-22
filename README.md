@@ -71,19 +71,28 @@ Essa estratégia foi planejada para que **cada fold de treino tenha aproximadame
 
 ---
 
-## Resultados Atuais
-O repositório atualmente inclui os **resultados experimentais com DenseNet-201**.
+## Resultados Atuais.
 
 ### Desempenho da DenseNet-201 (Validação Cruzada 6-Fold)
-- **Acurácia:** 87,1 ± 2,4%
-- **Sensibilidade (SJS):** 77,8 ± 4,1%
-- **Especificidade:** 91,9 ± 2,7%
-- **Precisão:** 85,4 ± 3,7%
-- **F1-score:** 81,3 ± 2,9%
+- **Acurácia:** 86,1 ± 1,5%
+- **Sensibilidade (SJS):** 80,7 ± 4,8%
+- **Especificidade:** 88,6 ± 3,9%
+- **Precisão:** 82,9 ± 3,7%
+- **F1-score:** 81,7 ± 2,8%
 
-Esses resultados indicam forte capacidade discriminativa, especialmente na redução de falsos positivos entre casos de CADR.
+### Desempenho da ResNet152 (Validação Cruzada 6-Fold)
+- **Acurácia:** 86,4 ± 1,8%
+- **Sensibilidade (SJS):** 78,1 ± 5,9%
+- **Especificidade:** 90,4 ± 3,8%
+- **Precisão:** 83,6 ± 4,5%
+- **F1-score:** 80,6 ± 3,4%
 
----
+### Desempenho da EfficientNet-b7 (Validação Cruzada 6-Fold)
+- **Acurácia:** 86,7 ± 2,6%
+- **Sensibilidade (SJS):** 84,4 ± 4,7%
+- **Especificidade:** 89,1 ± 4,2%
+- **Precisão:** 81,6 ± 4,8%
+- **F1-score:** 82,9 ± 3,6%
 
 ## Estrutura do Projeto
 ```text
