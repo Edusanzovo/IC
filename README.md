@@ -71,19 +71,6 @@ Essa estratégia foi planejada para que **cada fold de treino tenha aproximadame
 
 ---
 
-## Arquitetura do Modelo
-O modelo base utilizado neste repositório é:
-- **DenseNet-201**
-
-### Próximos Modelos
-As próximas etapas experimentais incluirão arquiteturas mais recentes:
-- **ResNet (variantes recentes)**
-- **EfficientNet**
-
-Esses modelos serão comparados com a DenseNet-201 para avaliar ganhos de desempenho em sensibilidade e generalização.
-
----
-
 ## Resultados Atuais
 O repositório atualmente inclui os **resultados experimentais com DenseNet-201**.
 
@@ -117,9 +104,13 @@ project/
 ---
 
 
-## Relevância Científica
-Este projeto faz parte de uma **Iniciação Científica (IC)** voltada à aplicação de inteligência artificial em análise de imagens dermatológicas.
+## 📊 Comparação Geral dos Modelos
 
-A motivação clínica é apoiar o diagnóstico diferencial de casos **potencialmente fatais de SJS/TEN**, reduzindo confusão com outros CADRs menos graves.
-
----
+| Métrica        | DenseNet + Early Stop | ResNet | EfficientNet |
+|----------------|------------------------|--------|--------------|
+| **Acurácia**       | 86,1%                 | 86,4%  | 86,7%        |
+| **Desvio padrão**  | **1,5%**              | 1,8%   | 2,6%         |
+| **Sensibilidade**  | 80,7%                 | 78,1%  | **84,4% 🔥** |
+| **Especificidade** | 88,6%                 | 90,4%  | 89,1%        |
+| **Precisão**       | 82,9%                 | 83,6%  | 81,6%        |
+| **F1-score**       | 81,7%                 | 80,6%  | **82,9% 🔥** |
