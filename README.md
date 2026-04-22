@@ -106,7 +106,7 @@ project/
 
 ## 📊 Comparação Geral dos Modelos
 
-| Métrica        | DenseNet + Early Stop | ResNet | EfficientNet |
+| Métrica        | DenseNet | ResNet | EfficientNet |
 |----------------|------------------------|--------|--------------|
 | **Acurácia**       | 86,1%                 | 86,4%  | 86,7%        |
 | **Desvio padrão**  | 1,5%              | 1,8%   | 2,6%         |
