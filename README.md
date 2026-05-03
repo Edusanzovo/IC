@@ -123,3 +123,14 @@ project/
 | **Especificidade** | 88,6%                 | 90,4%  | 89,1%        |
 | **Precisão**       | 82,9%                 | 83,6%  | 81,6%        |
 | **F1-score**       | 81,7%                 | 80,6%  | 82,9% |
+
+
+## EfficientNet focado em sensibilidade e com early stop mais robusto
+
+| Métrica        | Média   | Desvio padrão |
+|----------------|--------|--------------|
+| Sensibilidade  | **0.8716** | **0.0148** |
+| Precisão       | **0.6930** | **0.0520** |
+| F1 Score       | **0.7830** | **0.0340** |
+| Acurácia       | **0.8180** | **0.0410** |
+| AUC            | **0.9261** | **0.0189** |
