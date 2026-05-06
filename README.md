@@ -134,3 +134,12 @@ project/
 | F1 Score       | **0.7830** | **0.0340** |
 | Acurácia       | **0.8180** | **0.0410** |
 | AUC            | **0.9261** | **0.0189** |
+
+## Resultados do Paper — DCNN para Diagnóstico de SJS/TEN (inspiração para esse projeto.)
+
+| Métrica        | Resultado (%) |
+|----------------|---------------|
+| Sensibilidade  | 84.6 |
+| Especificidade | 74.0 |
+| Accuracy       | 76.6 |
+| AUC            | 0.873 |
