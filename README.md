@@ -135,7 +135,7 @@ project/
 | Acurácia       | **0.8180** | **0.0410** |
 | AUC            | **0.9261** | **0.0189** |
 
-## Resultados do Paper — DCNN para Diagnóstico de SJS/TEN (inspiração para esse projeto.)
+## Resultados do Paper — DCNN para Diagnóstico de SJS/TEN (inspiração para a IC.)
 
 | Métrica        | Resultado (%) |
 |----------------|---------------|
