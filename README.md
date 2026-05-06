@@ -141,5 +141,5 @@ project/
 |----------------|---------------|
 | Sensibilidade  | 84.6 |
 | Especificidade | 74.0 |
-| Accuracy       | 76.6 |
+| Acurácia       | 76.6 |
 | AUC            | 0.873 |
