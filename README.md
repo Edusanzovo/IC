@@ -129,17 +129,17 @@ project/
 
 | Métrica        | Média   | Desvio padrão |
 |----------------|--------|--------------|
-| Sensibilidade  | **0.8716** | **0.0148** |
-| Precisão       | **0.6930** | **0.0520** |
-| F1 Score       | **0.7830** | **0.0340** |
-| Acurácia       | **0.8180** | **0.0410** |
-| AUC            | **0.9261** | **0.0189** |
+| Sensibilidade  | **87,16%** | **1,48%** |
+| Precisão       | **69,30%** | **5,20%** |
+| F1 Score       | **78,30%** | **3,40%** |
+| Acurácia       | **81,80%** | **4,10%** |
+| AUC            | **92,61%** | **1,89%** |
 
 ## Resultados do Paper — DCNN para Diagnóstico de SJS/TEN (inspiração para a IC.)
 
-| Métrica        | Resultado (%) |
+| Métrica        | Resultado |
 |----------------|---------------|
-| Sensibilidade  | 84.6 |
-| Especificidade | 74.0 |
-| Acurácia       | 76.6 |
-| AUC            | 0.873 |
+| Sensibilidade  | 84.6% |
+| Especificidade | 74.0% |
+| Acurácia       | 76.6% |
+| AUC            | 0.873% |
