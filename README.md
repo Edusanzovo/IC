@@ -133,7 +133,7 @@ project/
 | Precisão       | **69,30%** | **5,20%** |
 | F1 Score       | **78,30%** | **3,40%** |
 | Acurácia       | **81,80%** | **4,10%** |
-| AUC            | **92,61%** | **1,89%** |
+| AUC            | **0.9261** | **0.0189** |
 
 ## Resultados do Paper — DCNN para Diagnóstico de SJS/TEN (inspiração para a IC.)
 
@@ -142,4 +142,4 @@ project/
 | Sensibilidade  | 84.6% |
 | Especificidade | 74.0% |
 | Acurácia       | 76.6% |
-| AUC            | 0.873% |
+| AUC            | 0.873 |
