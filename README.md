@@ -23,8 +23,8 @@ As imagens foram coletadas de dois grandes bancos dermatológicos:
 ### 1) Filtragem por Confiabilidade das Fontes
 A primeira etapa consistiu em filtrar o **Derm1M** para manter apenas imagens provenientes das **fontes clínicas mais confiáveis**, melhorando a qualidade do dataset e reduzindo ruído nos rótulos.
 
-### 2) Remoção de Duplicatas com FHash
-Em seguida, foi aplicada uma etapa de detecção de duplicatas usando **FHash (perceptual hashing)** para identificar:
+### 2) Remoção de Duplicatas com DHash
+Em seguida, foi aplicada uma etapa de detecção de duplicatas usando **DHash** para identificar:
 - imagens duplicadas **entre Derm1M e Mendeley**
 - imagens duplicadas **dentro do próprio dataset**
 
@@ -51,6 +51,9 @@ A estratégia de treinamento utiliza **validação cruzada 6-fold**.
 Cada fold utiliza:
 - **5 folds para treino**
 - **1 fold para validação**
+
+### Épocas
+O número máximo de épocas estabelecido foi 50, com um early stop que ativava caso não houvesse uma nova melhor **acurácia** depois de 5 épocas.
 
 ---
 
@@ -124,8 +127,17 @@ project/
 | **Precisão**       | 82,9%                 | 83,6%  | 81,6%        |
 | **F1-score**       | 81,7%                 | 80,6%  | 82,9% |
 
+## Resultados do Paper — DCNN para Diagnóstico de SJS/TEN (inspiração para a IC.)
 
-## EfficientNet focado em sensibilidade e com early stop mais robusto
+| Métrica        | Resultado |
+|----------------|---------------|
+| Sensibilidade  | 84.6% |
+| Especificidade | 74.0% |
+| Acurácia       | 76.6% |
+| AUC            | 0.873 |
+
+
+## EfficientNet focado em sensibilidade e com early stop mais robusto --> (ignorar essa tabela para o relatório de Aprendizado de Máquina)
 
 | Métrica        | Média   | Desvio padrão |
 |----------------|--------|--------------|
@@ -135,11 +147,3 @@ project/
 | Acurácia       | **81,80%** | **4,10%** |
 | AUC            | **0.9261** | **0.0189** |
 
-## Resultados do Paper — DCNN para Diagnóstico de SJS/TEN (inspiração para a IC.)
-
-| Métrica        | Resultado |
-|----------------|---------------|
-| Sensibilidade  | 84.6% |
-| Especificidade | 74.0% |
-| Acurácia       | 76.6% |
-| AUC            | 0.873 |
