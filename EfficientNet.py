@@ -8,7 +8,7 @@ from torchvision import transforms, models
 from torch.utils.data import Dataset, DataLoader
 import torch.nn as nn
 import torch.optim as optim
-from sklearn.metrics import accuracy_score, confusion_matrix, recall_score, roc_auc_score
+from sklearn.metrics import accuracy_score, confusion_matrix
 import matplotlib.pyplot as plt
 
 
@@ -84,30 +84,17 @@ def create_model():
     return model
 
 
-def train_one_fold(
-    train_loader,
-    val_loader,
-    device,
-    epochs=50,
-    patience=10,
-    min_delta=1e-4,
-    positive_label=0,
-    ema_alpha=0.3,
-    warmup_epochs=5
-):
+def train_one_fold(train_loader, val_loader, device, epochs=50, patience=5):
     model = create_model().to(device)
 
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=1e-4)
 
-    best_sensitivity = -float("inf")
-    best_val_loss = float("inf")
+    best_acc = 0
     best_model = None
     best_cm = None
-    best_auc = None
 
     patience_counter = 0
-    ema_sensitivity = None
 
     for epoch in range(epochs):
         model.train()
@@ -125,8 +112,6 @@ def train_one_fold(
         # validação
         model.eval()
         preds, targets = [], []
-        probs_positive = []
-        val_loss = 0.0
 
         with torch.no_grad():
             for images, labels in val_loader:
@@ -134,83 +119,31 @@ def train_one_fold(
                 labels = labels.to(device)
 
                 outputs = model(images)
-                loss = criterion(outputs, labels)
-
-                val_loss += loss.item() * images.size(0)
-
-                probabilities = torch.softmax(outputs, dim=1)
                 pred = torch.argmax(outputs, dim=1)
 
                 preds.extend(pred.cpu().numpy())
                 targets.extend(labels.cpu().numpy())
 
-                probs_positive.extend(
-                    probabilities[:, positive_label].cpu().numpy()
-                )
-
-        val_loss /= len(val_loader.dataset)
-
         acc = accuracy_score(targets, preds)
-
-        sensitivity = recall_score(
-            targets,
-            preds,
-            pos_label=positive_label,
-            zero_division=0
-        )
-
-        try:
-            auc = roc_auc_score(
-                [1 if t == positive_label else 0 for t in targets],
-                probs_positive
-            )
-        except ValueError:
-            auc = float("nan")
-
         cm = confusion_matrix(targets, preds)
 
-        if ema_sensitivity is None:
-            ema_sensitivity = sensitivity
-        else:
-            ema_sensitivity = (
-                ema_alpha * sensitivity +
-                (1 - ema_alpha) * ema_sensitivity
-            )
+        print(f"Epoch {epoch+1}: Val Acc = {acc:.4f}")
 
-        print(
-            f"Epoch {epoch+1}: "
-            f"Val Loss = {val_loss:.4f} | "
-            f"Acc = {acc:.4f} | "
-            f"Sensibilidade = {sensitivity:.4f} | "
-            f"EMA Sens = {ema_sensitivity:.4f} | "
-            f"AUC = {auc:.4f}"
-        )
-
-        improved_sensitivity = ema_sensitivity > best_sensitivity + min_delta
-        same_sensitivity_better_loss = (
-            abs(ema_sensitivity - best_sensitivity) <= min_delta
-            and val_loss < best_val_loss
-        )
-
-        if improved_sensitivity or same_sensitivity_better_loss:
-            best_sensitivity = ema_sensitivity
-            best_val_loss = val_loss
+        if acc > best_acc:
+            best_acc = acc
             best_model = copy.deepcopy(model.state_dict())
             best_cm = cm.copy()
-            best_auc = auc
             patience_counter = 0
         else:
-            if epoch + 1 > warmup_epochs:
-                patience_counter += 1
+            patience_counter += 1
 
-        if epoch + 1 > warmup_epochs and patience_counter >= patience:
+        # Early stopping
+        if patience_counter >= patience:
             print(f"Early stopping na epoch {epoch+1}")
             break
 
-    if best_model is not None:
-        model.load_state_dict(best_model)
-
-    return model, best_sensitivity, best_cm, best_auc
+    model.load_state_dict(best_model)
+    return model, best_acc, best_cm
 
 
 def plot_confusion_matrix(cm, fold):
@@ -260,22 +193,17 @@ def run_cross_validation(base_path, batch_size=8, epochs=50):
         train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
         val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False)
 
-        model, best_sensitivity, best_cm, best_auc = train_one_fold(
+        model, best_acc, best_cm = train_one_fold(
             train_loader,
             val_loader,
             device,
-            epochs,
-            patience=10,
-            positive_label=0
+            epochs
         )
 
-        results.append(best_sensitivity)
+        results.append(best_acc)
 
-        print(f"\nMatriz de confusão do Fold {val_fold}:")
-        print(f"Melhor sensibilidade do Fold {val_fold}: {best_sensitivity:.4f}")
-        print(f"AUC do melhor modelo do Fold {val_fold}: {best_auc:.4f}")
+        print(f"\nMatriz de confusão do Fold {val_fold}:") 
         print(best_cm)
 
 
 run_cross_validation(r"C:\Users\eduqu\OneDrive\Documentos\GitHub\IC\dataset", batch_size=8, epochs=50)
-
