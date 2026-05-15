@@ -82,7 +82,7 @@ def create_model():
     return model
 
 
-def train_one_fold(train_loader, val_loader, device, epochs=20):
+def train_one_fold(train_loader, val_loader, device, epochs=50, patience=5):
     model = create_model().to(device)
 
     criterion = nn.CrossEntropyLoss()
@@ -91,6 +91,8 @@ def train_one_fold(train_loader, val_loader, device, epochs=20):
     best_acc = 0
     best_model = None
     best_cm = None
+
+    patience_counter = 0
 
     for epoch in range(epochs):
         model.train()
@@ -105,6 +107,7 @@ def train_one_fold(train_loader, val_loader, device, epochs=20):
             loss.backward()
             optimizer.step()
 
+        # validação
         model.eval()
         preds, targets = [], []
 
@@ -128,6 +131,14 @@ def train_one_fold(train_loader, val_loader, device, epochs=20):
             best_acc = acc
             best_model = copy.deepcopy(model.state_dict())
             best_cm = cm.copy()
+            patience_counter = 0
+        else:
+            patience_counter += 1
+
+        # 🔥 Early stopping
+        if patience_counter >= patience:
+            print(f"Early stopping na epoch {epoch+1}")
+            break
 
     model.load_state_dict(best_model)
     return model, best_acc, best_cm
@@ -153,7 +164,7 @@ def plot_confusion_matrix(cm, fold):
     plt.show()
 
 
-def run_cross_validation(base_path, batch_size=8, epochs=8):
+def run_cross_validation(base_path, batch_size=8, epochs=50):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     results = []
 
@@ -189,10 +200,8 @@ def run_cross_validation(base_path, batch_size=8, epochs=8):
 
         results.append(best_acc)
 
-        print(f"\nMatriz de confusão do Fold {val_fold}:")
+        print(f"\nMatriz de confusão do Fold {val_fold}:") 
         print(best_cm)
 
-        plot_confusion_matrix(best_cm, val_fold)
 
-
-run_cross_validation(r"C:\Users\eduqu\OneDrive\Documentos\inicia\dataset", batch_size=8, epochs=8)
+run_cross_validation(r"C:\Users\eduqu\OneDrive\Documentos\GitHub\IC\dataset", batch_size=8, epochs=50)
