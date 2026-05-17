@@ -1,0 +1,99 @@
+Epoch 1: Val Acc = 0.8520
+Epoch 2: Val Acc = 0.8206
+Epoch 3: Val Acc = 0.8206
+Epoch 4: Val Acc = 0.8475
+Epoch 5: Val Acc = 0.8161
+Epoch 6: Val Acc = 0.8341
+Early stopping na epoch 6
+
+Matriz de confusão do Fold 1:
+[[ 51  27]
+ [  6 139]]
+
+======== FOLD 2 ========
+Epoch 1: Val Acc = 0.8150
+Epoch 2: Val Acc = 0.8106
+Epoch 3: Val Acc = 0.8414
+Epoch 4: Val Acc = 0.8590
+Epoch 5: Val Acc = 0.8590
+Epoch 6: Val Acc = 0.8326
+Epoch 7: Val Acc = 0.8194
+Epoch 8: Val Acc = 0.8590
+Epoch 9: Val Acc = 0.8238
+Early stopping na epoch 9
+
+Matriz de confusão do Fold 2:
+[[ 61  24]
+ [  8 134]]
+
+======== FOLD 3 ========
+Epoch 1: Val Acc = 0.8224
+Epoch 2: Val Acc = 0.8364
+Epoch 3: Val Acc = 0.8598
+Epoch 4: Val Acc = 0.8738
+Epoch 5: Val Acc = 0.8598
+Epoch 6: Val Acc = 0.8411
+Epoch 7: Val Acc = 0.8972
+Epoch 8: Val Acc = 0.8364
+Epoch 9: Val Acc = 0.8645
+Epoch 10: Val Acc = 0.8692
+Epoch 11: Val Acc = 0.8692
+Epoch 12: Val Acc = 0.8692
+Early stopping na epoch 12
+
+Matriz de confusão do Fold 3:
+[[ 65  10]
+ [ 12 127]]
+
+======== FOLD 4 ========
+Epoch 1: Val Acc = 0.8304
+Epoch 2: Val Acc = 0.8304
+Epoch 3: Val Acc = 0.8261
+Epoch 4: Val Acc = 0.8261
+Epoch 5: Val Acc = 0.8391
+Epoch 6: Val Acc = 0.8304
+Epoch 7: Val Acc = 0.8261
+Epoch 8: Val Acc = 0.8435
+Epoch 9: Val Acc = 0.8348
+Epoch 10: Val Acc = 0.8391
+Epoch 11: Val Acc = 0.7957
+Epoch 12: Val Acc = 0.8130
+Epoch 13: Val Acc = 0.8957
+Epoch 14: Val Acc = 0.8304
+Epoch 15: Val Acc = 0.8174
+Epoch 16: Val Acc = 0.8130
+Epoch 17: Val Acc = 0.8130
+Epoch 18: Val Acc = 0.8130
+Early stopping na epoch 18
+
+Matriz de confusão do Fold 4:
+[[ 76  10]
+ [ 14 130]]
+
+======== FOLD 5 ========
+Epoch 1: Val Acc = 0.8628
+Epoch 2: Val Acc = 0.8761
+Epoch 3: Val Acc = 0.8540
+Epoch 4: Val Acc = 0.8451
+Epoch 5: Val Acc = 0.8097
+Epoch 6: Val Acc = 0.8053
+Epoch 7: Val Acc = 0.8363
+Early stopping na epoch 7
+
+Matriz de confusão do Fold 5:
+[[ 53  21]
+ [  7 145]]
+
+======== FOLD 6 ========
+Epoch 1: Val Acc = 0.7873
+Epoch 2: Val Acc = 0.8235
+Epoch 3: Val Acc = 0.8190
+Epoch 4: Val Acc = 0.7919
+Epoch 5: Val Acc = 0.8235
+Epoch 6: Val Acc = 0.8100
+Epoch 7: Val Acc = 0.8235
+Early stopping na epoch 7
+
+Matriz de confusão do Fold 6:
+[[ 56  26]
+ [ 13 126]]
