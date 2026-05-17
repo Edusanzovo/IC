@@ -1,0 +1,84 @@
+Epoch 1: Val Acc = 0.7937
+Epoch 2: Val Acc = 0.7758
+Epoch 3: Val Acc = 0.8430
+Epoch 4: Val Acc = 0.8027
+Epoch 5: Val Acc = 0.7982
+Epoch 6: Val Acc = 0.7623
+Epoch 7: Val Acc = 0.7892
+Epoch 8: Val Acc = 0.7578
+Early stopping na epoch 8
+
+Matriz de confusão do Fold 1:
+[[ 63  15]
+ [ 20 125]]
+
+======== FOLD 2 ========
+Epoch 1: Val Acc = 0.8326
+Epoch 2: Val Acc = 0.8502
+Epoch 3: Val Acc = 0.8634
+Epoch 4: Val Acc = 0.8238
+Epoch 5: Val Acc = 0.8370
+Epoch 6: Val Acc = 0.8282
+Epoch 7: Val Acc = 0.7621
+Epoch 8: Val Acc = 0.7269
+Early stopping na epoch 8
+
+Matriz de confusão do Fold 2:
+[[ 61  24]
+ [  7 135]]
+
+======== FOLD 3 ========
+Epoch 1: Val Acc = 0.8832
+Epoch 2: Val Acc = 0.8785
+Epoch 3: Val Acc = 0.8692
+Epoch 4: Val Acc = 0.8785
+Epoch 5: Val Acc = 0.8692
+Epoch 6: Val Acc = 0.8551
+Early stopping na epoch 6
+
+Matriz de confusão do Fold 3:
+[[ 58  17]
+ [  8 131]]
+
+======== FOLD 4 ========
+Epoch 1: Val Acc = 0.8043
+Epoch 2: Val Acc = 0.8565
+Epoch 3: Val Acc = 0.8739
+Epoch 4: Val Acc = 0.8522
+Epoch 5: Val Acc = 0.8652
+Epoch 6: Val Acc = 0.8217
+Epoch 7: Val Acc = 0.7957
+Epoch 8: Val Acc = 0.8130
+Early stopping na epoch 8
+
+Matriz de confusão do Fold 4:
+[[ 71  15]
+ [ 14 130]]
+
+======== FOLD 5 ========
+Epoch 1: Val Acc = 0.8584
+Epoch 2: Val Acc = 0.8407
+Epoch 3: Val Acc = 0.8363
+Epoch 4: Val Acc = 0.8584
+Epoch 5: Val Acc = 0.8053
+Epoch 6: Val Acc = 0.8097
+Early stopping na epoch 6
+
+Matriz de confusão do Fold 5:
+[[ 51  23]
+ [  9 143]]
+
+======== FOLD 6 ========
+Epoch 1: Val Acc = 0.8326
+Epoch 2: Val Acc = 0.8009
+Epoch 3: Val Acc = 0.8416
+Epoch 4: Val Acc = 0.7738
+Epoch 5: Val Acc = 0.8009
+Epoch 6: Val Acc = 0.7873
+Epoch 7: Val Acc = 0.7873
+Epoch 8: Val Acc = 0.7828
+Early stopping na epoch 8
+
+Matriz de confusão do Fold 6:
+[[ 61  21]
+ [ 14 125]]
